@@ -1,25 +1,26 @@
 import org.junit.Test;
+import org.testng.Assert;
 
 public class HW14Test {
 
     @Test
     public void test() {
-        "tevirp".equals(HW14.forTesting("privet"));
+        Assert.assertEquals(HW14.forTesting("privet"), "tevirp");
     }
 
     @Test
     public void emptyStrTest() {
-        "".equals(HW14.forTesting(""));
+        Assert.assertEquals(HW14.forTesting(""), "");
     }
 
     @Test
     public void numberStrTest() {
-        "1234".equals(HW14.forTesting("4321"));
+        Assert.assertEquals(HW14.forTesting("4321"), "1234");
     }
 
     @Test
     public void nullTest() {
-        System.out.println("nullTest completed = " + HW14.forTesting(null));
+        Assert.assertEquals(HW14.forTesting(null), null);
     }
 
 }
