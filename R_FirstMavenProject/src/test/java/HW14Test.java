@@ -1,11 +1,11 @@
-import org.junit.Test;
+import org.testng.annotations.Test;
 import org.testng.Assert;
 
 public class HW14Test {
 
     @Test
     public void test() {
-        Assert.assertEquals(HW14.reverseTest("privet"), "tevirp");
+        Assert.assertEquals(HW14.reverseTest("privet"), "tvirp", "ALARM!");
     }
 
     @Test
