@@ -2,11 +2,11 @@ package Task9;
 
 public class UtilsEmployee {
 
-    public static String findByName(Employee[] employeeArray, String name) {
+    public static String findByName(OldEmployee[] oldEmployeeArray, String name) {
 
 
-        for (int i = 0; i < employeeArray.length; i++) {
-            if (employeeArray[i].name.equals(name)) {
+        for (int i = 0; i < oldEmployeeArray.length; i++) {
+            if (oldEmployeeArray[i].name.equals(name)) {
                 return "Name is found";
 
             }
@@ -16,12 +16,12 @@ public class UtilsEmployee {
 
     }
 
-    public static String findBySubSting(Employee[] employeeArray, String name) {
+    public static String findBySubSting(OldEmployee[] oldEmployeeArray, String name) {
 
 
-        for (int i = 0; i < employeeArray.length; i++) {
-            if (employeeArray[i].name.indexOf(name) == -1) {
-                return employeeArray[i].name;
+        for (int i = 0; i < oldEmployeeArray.length; i++) {
+            if (oldEmployeeArray[i].name.indexOf(name) == -1) {
+                return oldEmployeeArray[i].name;
 
             }
 
@@ -30,13 +30,13 @@ public class UtilsEmployee {
 
     }
 
-    public static String minSalary(Employee[] employeeArray, int salary) {
+    public static String minSalary(OldEmployee[] oldEmployeeArray, int salary) {
 
 
         int result = Integer.MAX_VALUE;
-        for (int i = 0; i < employeeArray.length; i++) {
-            if (employeeArray[i].salary < result) {
-                employeeArray[i].salary = result;
+        for (int i = 0; i < oldEmployeeArray.length; i++) {
+            if (oldEmployeeArray[i].salary < result) {
+                oldEmployeeArray[i].salary = result;
 
             }
 
@@ -46,13 +46,13 @@ public class UtilsEmployee {
 
     }
 
-    public static String maxSalary(Employee[] employeeArray, int salary) {
+    public static String maxSalary(OldEmployee[] oldEmployeeArray, int salary) {
 
 
         int result = 0;
-        for (int i = 0; i < employeeArray.length; i++) {
-            if (employeeArray[i].salary > result) {
-                employeeArray[i].salary = result;
+        for (int i = 0; i < oldEmployeeArray.length; i++) {
+            if (oldEmployeeArray[i].salary > result) {
+                oldEmployeeArray[i].salary = result;
 
             }
 
@@ -61,12 +61,12 @@ public class UtilsEmployee {
 
     }
 
-    public static Employee findEmployee(Employee[] employeeArray, Employee employee) {
+    public static OldEmployee findEmployee(OldEmployee[] oldEmployeeArray, OldEmployee oldEmployee) {
 
 
-        for (int i = 0; i < employeeArray.length; i++) {
-            if (employeeArray[i].equals(employee)) {
-                return employeeArray[i];
+        for (int i = 0; i < oldEmployeeArray.length; i++) {
+            if (oldEmployeeArray[i].equals(oldEmployee)) {
+                return oldEmployeeArray[i];
 
             }
 
