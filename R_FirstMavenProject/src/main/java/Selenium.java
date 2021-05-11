@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,22 +9,29 @@ public class Selenium {
 
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver", "C:/_install/chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:/_install/chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://google.com/");
+        try {
 
-        WebElement input = driver.findElement(By.className("gLFyf"));
-        input.sendKeys("luba\n");
+            driver.get("https://google.com/");
 
-        WebElement result = driver.findElement(By.xpath("//h3[text() = 'Luba — Википедия']"));
+            WebElement input = driver.findElement(By.className("gLFyf"));
+            input.sendKeys("luba\n");
 
-        Assert.assertEquals(result.getText(), "Luba — Википедия");
+            WebElement result = driver.findElement(By.xpath("//h3[text() = 'Luba — Википедия']"));
 
-        Thread.sleep(5000);
+            Assert.assertEquals(result.getText(), "Luba — Википедия");
 
-        driver.quit();
+            Thread.sleep(5000);
+
+        } finally {
+
+            driver.quit();
+
+        }
 
     }
 
